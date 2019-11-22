@@ -1,0 +1,8 @@
+---
+prometheus_node_cert_exporter_base_url: "https://github.com/amimof/node-cert-exporter/releases/download"
+prometheus_node_cert_exporter_dl_url: "{{ prometheus_node_cert_exporter_base_url }}/{{ single_binary_service_version }}/node-cert-exporter-linux-{{ prometheus_node_cert_exporter_arch }}"
+prometheus_node_cert_exporter_group: prometheus
+prometheus_node_cert_exporter_user: prometheus
+prometheus_node_cert_exporter_version: 1.0.0-beta.3
+prometheus_node_cert_exporter_paths:
+  - /etc/ssl
