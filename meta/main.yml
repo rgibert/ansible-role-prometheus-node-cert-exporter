@@ -1,0 +1,43 @@
+---
+galaxy_info:
+  role_name: prometheus_node_cert_exporter
+  author: Richard Gibert
+  company: Gibert.ca
+  description: Installs a Prometheus certificate file exporter
+  license: GPLv3
+  min_ansible_version: 2.2
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Ubuntu
+      versions:
+        - bionic
+        - eoan
+        - trusty
+        - xenial
+  galaxy_tags:
+    - prometheus
+    - ssl
+    - tls
+    - prometheustlsexporter
+    - prometheuscertexporter
+    - prometheusnodecertexporter
+dependencies:
+  - role: rgibert.single_binary_service
+    version: "{{ single_binary_service_role_version }}"
+    single_binary_service_checksum: "sha256:4bf180bf5b3a0c71b74293ed047e2b671e95659b719bae79aa5f11d570f3a391"
+    prometheus_node_cert_exporter_arch: amd64
+    when:
+      - ansible_architecture == 'x86_64'
+    tag:
+      - prometheus_node_cert_exporter
+  - role: rgibert.single_binary_service
+    version: "{{ single_binary_service_role_version }}"
+    single_binary_service_checksum: "sha256:59e8a9bbdb2f14cb4c3aee1df0104c3a4eb3c319917a45a8d39af988a071f325"
+    prometheus_node_cert_exporter_arch: "{{ ansible_architecture }}"
+    when:
+      - ansible_architecture == 'arm'
+    tag:
+      - prometheus_node_cert_exporter

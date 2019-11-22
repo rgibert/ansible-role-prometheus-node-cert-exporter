@@ -1,0 +1,24 @@
+---
+repository:
+  name: ansible-role-prometheus-node-cert-exporter
+  description: Ansible role to install amimof/node-cert-exporter
+  homepage: https://github.com/amimof/node-cert-exporter
+  topics: ansiblee, ansible-role, prometheus, prometheus-exporter, node-cert-exporter, ssl, tls, certificate
+  private: false
+  has_issues: true
+  has_wiki: true
+  has_downloads: true
+  default_branch: master
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: false
+
+labels:
+  - name: bug
+    color: d73a4a
+  - name: duplicate
+    color: cfd3d7
+  - name: enhancement
+    color: a2eeef
+  - name: wontfix
+    color: ffffff
