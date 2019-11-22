@@ -4,7 +4,7 @@ services:
   - docker
 env:
   global:
-    - ROLE_NAME: rgibert.prometheus_node_cert_exporter
+    - ROLE_NAME: prometheus_node_cert_exporter
   matrix:
     - MOLECULE_DISTRO: centos:7
 before_install:
